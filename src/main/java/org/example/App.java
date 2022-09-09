@@ -3,14 +3,22 @@ package org.example;
 
 public class App{
 
-    public static void main( String[] args )
+
+    public static void main(String[]args)
+
+
+
     {
-        byte a=10;
-        byte b=110;
-        byte c=a;
-        a=b;
-        b=c;
-        System.out.println(a);
-        System.out.println(b);
+        System.out.println(fibonazzi(7));}
+
+
+
+    public static long fibonazzi(int n){
+       if (n==0)return 0;
+    return n<=2?1:fibonazzi(n-2)+fibonazzi(n-1);}
+
     }
-}
+
+
+
+
