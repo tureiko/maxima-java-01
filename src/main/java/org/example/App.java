@@ -9,13 +9,13 @@ public class App{
 
 
     {
-        System.out.println(fibonazzi(7));}
+        System.out.println(fibonazzi(0));}
 
 
 
     public static long fibonazzi(int n){
-       if (n==0)return 0;
-    return n<=2?1:fibonazzi(n-2)+fibonazzi(n-1);}
+
+    return n<=0?0: n<=2 ? 1 : fibonazzi(n-2)+fibonazzi(n-1);}
 
     }
 
