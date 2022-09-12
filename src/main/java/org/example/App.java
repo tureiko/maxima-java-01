@@ -6,10 +6,10 @@ public class App {
 
     public static void main(String[] args) {
 
-         System.out.println(nativeDays(2,2000));}
+         System.out.println( daysCount(2,2020));}
 
-    public static String nativeDays(int month,int year){
-        String result="";
+    public static byte daysCount(int month,int year){
+        byte result;
         switch (month){
 
             case 1:
@@ -19,22 +19,24 @@ public class App {
             case 8:
             case 10:
             case 12:
-                result ="31";
+                result =31;
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                result="30";
+                result=30;
                 break;
             case 2:
                 if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-                    result="29";}
-                    else {
-                    result="28";}
+                    result=29;}
+                else{
+                    result=28;}
 
-        }return result;
 
+                break;
+            default: throw new IllegalStateException("Unexpected value: " + month);
+        }       return result;
     }
 
 
