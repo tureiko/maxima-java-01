@@ -6,7 +6,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(isSimple(5));
+        System.out.println(isSimple(15));
     }
 
 
@@ -15,19 +15,15 @@ public class App {
 
         for (int i = 2; i < n; i++) {
 
-            if (n / i * i == n) {
-                n = 1;
-            } else {
-                n = 0;
-                break;
+
+            if (n % i == 0) {
+
+                return i;
             }
-
         }
-
-        return n;
+        return n = 0;
     }
 }
-
 
 
 
